@@ -7,7 +7,7 @@
     "serve": "vite preview",
     "tsc": "tsc",
     "lint": "eslint src --ext ts,tsx",
-    "code-style": "prettier -c src/**/*.{ts,tsx}",
+    "format": "prettier -w src/**/*.{ts,tsx}",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -36,6 +36,9 @@
     "yarn": "1.22.10"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "prettier --write && eslint --cache --fix"
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
   }
 }
