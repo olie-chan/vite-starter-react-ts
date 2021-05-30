@@ -5,6 +5,7 @@
     },
     "extends": [
         "eslint:recommended",
+        "prettier",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
@@ -20,7 +21,8 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "settings": {
       "react": {
