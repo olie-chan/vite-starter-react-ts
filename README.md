@@ -1,5 +1,3 @@
-# Description
-
 Starter template for a React Typescript project including TailwindCSS, Cypress, ESlint and Prettier.
 
 ## Prerequisites
