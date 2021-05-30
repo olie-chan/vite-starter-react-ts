@@ -3,8 +3,8 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["cypress", "node", "mocha", "chai"],
+    "types": ["cypress", "node", "mocha"],
     "isolatedModules": false
   },
-  "include": ["**/*.ts"]
+  "include": ["./**/*.spec.ts"]
 }

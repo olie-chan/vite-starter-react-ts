@@ -1,53 +1,53 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "prettier",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module",
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
-    ],
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "rules": {
-      "prefer-const": "error",
-      "@typescript-eslint/no-unused-vars": "off", //handled by tsc compiler
-      "@typescript-eslint/no-unused-params": "off" //handled by tsc compile
-    },
-    "overrides": [{
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prefer-const": "error",
+    "@typescript-eslint/no-unused-vars": "off", //handled by tsc compiler
+    "@typescript-eslint/no-unused-params": "off" //handled by tsc compile
+  },
+  // Cypress test overrides
+  "overrides": [
+    {
       "files": ["cypress/**/*.{ts,tsx}"],
       "plugins": ["cypress"],
       "extends": ["plugin:cypress/recommended"],
       "env": {
-        "cypress/globals": true,
-        "mocha": true
+        "cypress/globals": true
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./cypress/tsconfig.json"
       },
       "rules": {
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-call": "off"
       }
-    }],
-    "ignorePatterns": [
-      "node_modules"
-    ]
+    }
+  ],
+  "ignorePatterns": ["node_modules"]
 }
