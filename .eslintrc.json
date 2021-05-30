@@ -33,21 +33,21 @@
   // Cypress test overrides
   "overrides": [
     {
-      "files": ["cypress/**/*.{ts,tsx}"],
+      "files": ["./**/*spec.{ts,tsx}"],
       "plugins": ["cypress"],
       "extends": ["plugin:cypress/recommended"],
       "env": {
         "cypress/globals": true
       },
       "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "project": "./cypress/tsconfig.json"
-      },
+      // "parserOptions": {
+      //   "project": "./cypress/tsconfig.json"
+      // },
       "rules": {
         "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/no-unsafe-call": "off"
       }
     }
   ],
-  "ignorePatterns": ["node_modules", "*.config.js"]
+  "ignorePatterns": ["node_modules", "*.config.js", "cypress/plugins/*.js"]
 }

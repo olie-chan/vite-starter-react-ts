@@ -3,5 +3,3 @@ describe("My First Test", () => {
     expect(true).to.equal(true);
   });
 });
-
-export {};
