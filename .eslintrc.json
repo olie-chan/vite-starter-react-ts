@@ -30,24 +30,18 @@
     "@typescript-eslint/no-unused-vars": "off", //handled by tsc compiler
     "@typescript-eslint/no-unused-params": "off" //handled by tsc compile
   },
-  // Cypress test overrides
+  // test overrides
   "overrides": [
     {
       "files": ["./**/*spec.{ts,tsx}"],
-      "plugins": ["cypress"],
-      "extends": ["plugin:cypress/recommended"],
-      "env": {
-        "cypress/globals": true
-      },
+      "env": {},
       "parser": "@typescript-eslint/parser",
-      // "parserOptions": {
-      //   "project": "./cypress/tsconfig.json"
-      // },
       "rules": {
         "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-call": "off"
+        "@typescript-eslint/no-unsafe-call": "off",
+        "react/react-in-jsx-scope": "off"
       }
     }
   ],
-  "ignorePatterns": ["node_modules", "*.config.js", "cypress/plugins/*.js"]
+  "ignorePatterns": ["node_modules", "*.config.{ts,js}"]
 }

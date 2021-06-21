@@ -16,10 +16,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "paths": {
       "@components/*": ["src/components/*"]
     }
   },
-  "include": ["src", "cypress", "vite.config.ts"]
+  "include": ["src", "cypress", "vite.config.ts", "jest.config.ts"],
 }
